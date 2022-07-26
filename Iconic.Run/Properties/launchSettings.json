@@ -1,0 +1,43 @@
+{
+  "profiles": {
+    "Start (Dev)": {
+      "commandName": "Project",
+      "workingDirectory": "../Runtime",
+      "launchBrowser": true,
+      "launchUrl": "http://127.0.0.1:5123",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "applicationUrl": "http://localhost:5123",
+      "dotnetRunMessages": "true"
+    },
+    "Start (Prod)": {
+      "commandName": "Project",
+      "workingDirectory": "../Runtime",
+      "launchBrowser": true,
+      "launchUrl": "http://127.0.0.1:5123",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      },
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "applicationUrl": "http://localhost:5123",
+      "dotnetRunMessages": "true"
+    },
+    "Profilo 1": {
+      "commandName": "Project",
+      "workingDirectory": "../Runtime",
+      "launchBrowser": true,
+      "launchUrl": "http://127.0.0.1:5123",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "applicationUrl": "http://localhost:5123",
+      "dotnetRunMessages": "true"
+    },
+    "Profilo 2": {
+      "commandName": "Project"
+    }
+  }
+}

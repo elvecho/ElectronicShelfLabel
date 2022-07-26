@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages" Version="2.2.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Plugga.Core" Version="1.5.0" />
+		<RuntimeFiles Include="$(OutDir)$(TargetName).*" />
+		<AppSettingsFiles Include="$(ProjectDir)appsettings*.json" />
+		<WWWFiles Include="$(ProjectDir)wwwroot\**\*.*" />
+	</ItemGroup>
+
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Copy SourceFiles="@(RuntimeFiles)" DestinationFolder="$(SolutionDir)Runtime\Pluggables\ElectronicShelfLabel" />
+		<Copy SourceFiles="@(AppSettingsFiles)" DestinationFolder="$(SolutionDir)Runtime\Pluggables\ElectronicShelfLabel" />
+		<Copy SourceFiles="@(WWWFiles)" DestinationFolder="$(SolutionDir)Runtime\Pluggables\ElectronicShelfLabel\wwwroot\%(RecursiveDir)" />
+		<!--<Copy SourceFiles="@(AssemblyLoadContext)" DestinationFolder="$(SolutionDir)Runtime\Pluggables\ServerIconicItemPriceCheckerTPNet\AssemblyLoadContext\%(RecursiveDir)" />-->
+	</Target>
+
+
+</Project>
